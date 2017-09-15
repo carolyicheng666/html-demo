@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+	.container {
+		padding: 2rem 0;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>数据结构</h2>
+		
+		<pre>
+		[
+			["列A", "列B"], // 这将作为excel文件的标题
+			[1,2]
+		]
+		</pre>
+		<button class="btn btn-primary" onclick="saveAsExcelFile()">保存为Excel文件</button>
+	</div>
+	<script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+	<script src="https://cdn.bootcss.com/xlsx/0.11.3/xlsx.full.min.js"></script>
+	<script>
+	function s2ab(s) {
+		const buf = new ArrayBuffer(s.length);
+		const view = new Uint8Array(buf);
+		for (let i = 0; i !== s.length; ++i) {
+			view[i] = s.charCodeAt(i) & 0xFF;
+		};
+		return buf;
+	}
+	function saveAsExcelFile() {
+		let data = [
+			["列A", "列B"],
+			[3,4]
+		];
+		let wopts = { bookType:'xlsx', type:'binary' };
+		let fileName = "bill.xlsx";
+		const ws = XLSX.utils.aoa_to_sheet(data);
+		const wb = XLSX.utils.book_new();
+		XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+		const wbout = XLSX.write(wb, wopts);
+		saveAs(new Blob([s2ab(wbout)]), fileName); // 保存为文件
+	}
+	</script>
+</body>
+</html>
