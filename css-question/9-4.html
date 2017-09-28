@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>9-4</title>
+    <style type="text/css">
+    #container {
+        width: 400px;
+        margin: 0 auto;
+        background-image: linear-gradient(90deg, yellowgreen 50%, deeppink 0);
+        overflow: hidden;
+    }
+
+    .left,
+    .right {
+        width: 200px;
+        float: left;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 这个方法很像使用背景图，然后背景图 repeat-y  -->
+    <!-- 不过有了 css3 渐变之后 不需要再多一个http请求了 -->
+    <div id="container">
+        <div class="left">多列等高布局</div>
+        <div class="right">多列等高布局,如果是两列宽度固定或者百分比固定，可以试试这种父容器使用多重背景色的方法。
+            <br/>多列等高布局,如果是两列宽度固定或者百分比固定，可以试试这种父容器使用多重背景色的方法。</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>9-5</title>
+    <style type="text/css">
+    #container {
+        width: 400px;
+        margin: 0 auto;
+        background: #eee;
+        overflow: hidden;
+        display: table;
+    }
+
+    .left,
+    .right {
+        display: table-cell;
+        width: 200px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333;
+    }
+
+    .left {
+        background-color: deeppink;
+    }
+
+    .right {
+        background-color: yellowgreen;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="left">多列等高布局</div>
+            <div class="right">多列等高布局,使用 display:table-cell 的方式实现。多列等高布局,使用 display:table-cell 的方式实现。多列等高布局,使用 display:table-cell 的方式实现。</div>
+        </div>
+    </div>
+</body>
+
+</html>

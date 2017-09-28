@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>9-2</title>
+    <style type="text/css">
+    #container {
+        width: 400px;
+        margin: 0 auto;
+        background: #eee;
+        overflow: hidden;
+    }
+
+    .left,
+    .right {
+        width: 200px;
+        float: left;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333;
+        padding-bottom: 5000px;
+        margin-bottom: -5000px;
+    }
+
+    .left {
+        background-color: deeppink;
+    }
+
+    .right {
+        background-color: yellowgreen;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="left">多列等高布局左</div>
+        <div class="right">多列等高布局,使用正负 margin 与 padding 相冲的方式实现。多列等高布局,使用正负 margin 与 padding 相冲的方式实现。</div>
+    </div>
+</body>
+
+</html>
