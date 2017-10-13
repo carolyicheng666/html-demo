@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+     ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: #f1f1f1
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        background-color: #F5F5F5
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #555;
+        background-color: rgba(0, 0, 0, .5)
+    }
+
+    .gotop {
+	    position: fixed;
+	    right: 20px;
+	    width: 46px;
+	    height: 46px;
+	    z-index: 2000;
+	    overflow: hidden;
+	    text-indent: -99em;
+	    bottom: 100px;
+	    display: none;
+	    background: url(./images/icon-gotop.png) center center no-repeat
+	}
+
+    #div1 {
+        height: 2000px;
+    }
+    </style>
+    <script src='https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    	$(function () {
+    		$(document.body).find(".gotop").remove()
+    		$('<a href="javascript:;" class="gotop">gotop</a>').appendTo(document.body)
+	    	$(window).on("scroll", function() {
+		        var e = $(window).scrollTop();
+		        e > 200 ? $(document).find(".gotop").fadeIn() : $(document).find(".gotop").fadeOut()
+		    })
+		    $(document).on("click", ".gotop", function() {
+		        $("html, body").animate({
+		            scrollTop: 0
+		        }, 300)
+		    })
+    	})
+    </script>
+</head>
+
+<body>
+    <div id="div1"> scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 scrollHeight: 获取对象的滚动高度。 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离</div>
+
+    <a href="javascript:;" class="gotop" style="display: block;">gotop</a>
+</body>
+
+</html>
