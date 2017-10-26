@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="firstName">点击</button>
+    <script>
+    var firstName = document.getElementById('firstName');
+
+    /* 传统绑定 */
+    firstName.onclick = function() {
+        console.log(firstName.id);
+        firstName.style.background = 'yellow';
+    }
+
+    /* 带参绑定 */
+    firstName.onclick = function(e) {
+        console.log(e.target.id);
+        e.target.style.background = 'yellow';
+    }
+
+    /* this绑定 */
+    firstName.onclick = function() {
+        console.log(this.id);
+        this.style.background = 'yellow';
+    }
+
+    /* W3C绑定 */
+    firstName.addEventListener('click', function(e) {
+        console.log(e.target.id);
+        e.target.style.background = 'yellow';
+    })
+    </script>
+</body>
+
+</html>
