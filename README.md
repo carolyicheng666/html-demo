@@ -15,6 +15,7 @@ html-demo
 - [button hover效果](https://github.com/carolyicheng666/html-demo/blob/master/buttonhover.html)
 - [callee用法](https://github.com/carolyicheng666/html-demo/blob/master/callee.js)
 - [HTML5 调用手机拍照并压缩上传](https://github.com/carolyicheng666/html-demo/blob/master/camera.html)
+- [checkbox全选和取消全选](https://github.com/carolyicheng666/html-demo/blob/master/checkbox.html)
 - [清除浮动](https://github.com/carolyicheng666/html-demo/blob/master/clearfix.html)
 - [table布局用法](https://github.com/carolyicheng666/html-demo/blob/master/display-table.html)
 - [Gradient例子](https://github.com/carolyicheng666/html-demo/blob/master/gradient.html)

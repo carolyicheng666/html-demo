@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    function checkClick(value) {
+        var checkbox = document.getElementById('checkboxs'); //获取div
+        var checked = checkbox.getElementsByTagName('input'); //获取div下的input
+        if (value == 1)
+            //如果(value == 1),则选中了全选checkbox,通过遍历将所有checkbox选中
+            for (i = 0; i < checked.length; i++)
+                checked[i].checked = true;
+        else if (value == 0)
+            //如果(value == 0),则点击了了取消去选按钮,通过遍历将所有checkbox取消选中
+            for (i = 0; i < checked.length; i++)
+                checked[i].checked = false;
+        $(document).ready(function() {
+            //如果name为test的input的选中个数大于等于7
+            if ($("input[name='test']:checked").length >= 7)
+                document.getElementById('inlineCheckbox1').checked = true;
+            //如果name为test的input的选中个数大于等于7
+            else if ($("input[name='test']:checked").length < 7)
+                document.getElementById('inlineCheckbox1').checked = false;
+        });
+    };
+    </script>
+</head>
+
+<body>
+    <div id="checkboxs">
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="1" style="margin-top: 3px;" onclick="checkClick(this.value)">全选</label>
+        <button class="btn btn-default" value="0" onclick="checkClick(this.value)">取消全选</button>
+        <br/>
+        <label class="checkbox-inline">
+            <input name="test" type="checkbox" id="inlineCheckbox2" value="2" style="margin-top: 3px;" onclick="checkClick(this.value)">2</label>
+        <label class="checkbox-inline">
+            <input name="test" type="checkbox" id="inlineCheckbox3" value="3" style="margin-top: 3px;" onclick="checkClick(this.value)">3</label>
+        <label class="checkbox-inline">
+            <input name="test" type="checkbox" id="inlineCheckbox4" value="4" style="margin-top: 3px;" onclick="checkClick(this.value)">4</label>
+        <label class="checkbox-inline">
+            <input name="test" type="checkbox" id="inlineCheckbox5" value="5" style="margin-top: 3px;" onclick="checkClick(this.value)">5</label>
+        <label class="checkbox-inline">
+            <input name="test" type="checkbox" id="inlineCheckbox6" value="6" style="margin-top: 3px;" onclick="checkClick(this.value)">6</label>
+        <label class="checkbox-inline">
+            <input name="test" type="checkbox" id="inlineCheckbox7" value="7" style="margin-top: 3px;" onclick="checkClick(this.value)">7</label>
+        <label class="checkbox-inline">
+            <input name="test" type="checkbox" id="inlineCheckbox8" value="8" style="margin-top: 3px;" onclick="checkClick(this.value)">8</label>
+    </div>
+</body>
+
+</html>
