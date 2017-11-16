@@ -21,6 +21,7 @@ html-demo
 - [table布局用法](https://github.com/carolyicheng666/html-demo/blob/master/display-table.html)
 - [Gradient例子](https://github.com/carolyicheng666/html-demo/blob/master/gradient.html)
 - [浏览器indexedDB用法](https://github.com/carolyicheng666/html-demo/blob/master/indexedDB.html)
+- [nodejs搭建简易服务端](https://github.com/carolyicheng666/html-demo/blob/master/node-server.js)
 - [事件绑定的方式](https://github.com/carolyicheng666/html-demo/blob/master/onclick.html)
 - [radio和checkbox美化](https://github.com/carolyicheng666/html-demo/blob/master/radio-checkbox.html)
 - [网页数据保存成excel并下载](https://github.com/carolyicheng666/html-demo/blob/master/saveAsExcelFile.html)
