@@ -9,6 +9,7 @@ html-demo
 - [css3d变换](https://github.com/carolyicheng666/html-demo/blob/master/3D-css-transition.html)
 - [手风琴效果](https://github.com/carolyicheng666/html-demo/blob/master/Accordion.html)
 - [快速输出xx以内的连续数组](https://github.com/carolyicheng666/html-demo/blob/master/ali.js)
+- [大白](https://github.com/carolyicheng666/html-demo/blob/master/Baymax.html)
 - [伪元素实现叠加图像效果](https://github.com/carolyicheng666/html-demo/blob/master/before-after-imageStack.html)
 - [js更好的写法](https://github.com/carolyicheng666/html-demo/blob/master/betterJs.js)
 - [8款纯css3搜索框](https://github.com/carolyicheng666/html-demo/blob/master/button.html)
