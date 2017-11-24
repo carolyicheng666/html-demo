@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+<style>
+textarea {
+  width: 200px;
+  height: 200px;
+  resize: none;
+  margin: 30px;
+  padding: 20px;
+  border: 10px solid red;
+  white-space: nowrap;
+}
+</style>
+
+<body>
+  <textarea id='t'>123123213211232132132123132123132111111</textarea>
+</body>
+<script>
+  try {
+    var obj = document.getElementById('t');
+    // width0 - 滚动条宽度
+    console.log('width: ' + getComputedStyle(obj).width);
+
+    // width + padding
+    console.log('clientWidth: ' + obj.clientWidth + 'px');
+
+    // clientWidth + 溢出部分宽度
+    console.log('scrollWidth: ' + obj.scrollWidth + 'px');
+
+    // width0 + padding + border
+    console.log('offsetWidth: ' + obj.offsetWidth + 'px');
+  } catch (e) {
+      window.location.href = "http://stackoverflow.com/search?q=[js]+" + e.message;
+  }
+</script>
+</html>
