@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sweet Alert</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css" />
+	<script src="https://unpkg.com/jquery"></script>
+	<script src="https://unpkg.com/sweetalert"></script>
+</head>
+<body>
+	<button type="button" class="btn btn-default" onclick="button1();">Button 1</button>
+	<script>
+		function button1() {
+			swal("Hello world!");
+		}
+	</script>
+
+	<button type="button" class="btn btn-default" onclick="button2();">Button 2</button>
+	<script>
+		function button2() {
+			swal("Here's the title!", "...and here's the text!");
+		}
+	</script>
+
+	<button type="button" class="btn btn-default" onclick="button3();">Button 3</button>
+	<script>
+		function button3() {
+			swal("Good job!", "You clicked the button!", "success");
+		}
+	</script>
+
+	<button type="button" class="btn btn-default" onclick="button4();">Button 4</button>
+	<script>
+		function button4() {
+			swal({
+			  title: "Good job!",
+			  text: "You clicked the button!",
+			  icon: "success",
+			  button: "Aww yiss!",
+			});
+		}
+	</script>
+
+	<button type="button" class="btn btn-default" onclick="button5();">Button 5</button>
+	<script>
+		function button5() {
+			swal("Good job!", "You clicked the button!", "success", {
+			  button: "Aww yiss!",
+			});
+		}
+	</script>
+
+	<button type="button" class="btn btn-default" onclick="button6();">Button 6</button>
+	<script>
+		function button6() {
+			swal("Click on either the button or outside the modal.").then((value) => {
+			  swal(`The returned value is: ${value}`);
+			});
+		}
+	</script>
+
+	<button type="button" class="btn btn-default" onclick="button7();">Button 7</button>
+	<script>
+		function button7() {
+			swal({
+			  title: "Are you sure?",
+			  text: "Once deleted, you will not be able to recover this imaginary file!",
+			  icon: "warning",
+			  buttons: true,
+			  dangerMode: true,
+			}).then((willDelete) => {
+			  if (willDelete) {
+			    swal("Poof! Your imaginary file has been deleted!", {
+			      icon: "success",
+			    });
+			  } else {
+			    swal("Your imaginary file is safe!");
+			  }
+			});
+		}
+	</script>
+
+	<button type="button" class="btn btn-default" onclick="button8();">Button 8</button>
+	<script>
+		function button8() {
+			swal("A wild Pikachu appeared! What do you want to do?", {
+			  buttons: {
+			    cancel: "Run away!",
+			    catch: {
+			      text: "Throw Pokéball!",
+			      value: "catch",
+			    },
+			    defeat: true,
+			  },
+			}).then((value) => {
+			  switch (value) {
+			 
+			    case "defeat":
+			      swal("Pikachu fainted! You gained 500 XP!");
+			      break;
+			 
+			    case "catch":
+			      swal("Gotcha!", "Pikachu was caught!", "success");
+			      break;
+			 
+			    default:
+			      swal("Got away safely!");
+			  }
+			});
+		}
+	</script>
+</body>
+</html>

@@ -29,6 +29,7 @@ html-demo
 - [改变浏览器滚动条样式 回到顶部效果](https://github.com/carolyicheng666/html-demo/blob/master/scrollAndGotop.html)
 - [6大排序算法](https://github.com/carolyicheng666/html-demo/blob/master/sort.js)
 - [雪碧图](https://github.com/carolyicheng666/html-demo/blob/master/sprite.html)
+- [SweetAlert](https://github.com/carolyicheng666/html-demo/blob/master/sweetalert.html) [原项目地址](https://github.com/t4t5/sweetalert)
 - [transform](https://github.com/carolyicheng666/html-demo/blob/master/transform.html)
 - [获取浏览器名称和版本号](https://github.com/carolyicheng666/html-demo/blob/master/version.html)
 - [网页切换标签时修改title](https://github.com/carolyicheng666/html-demo/blob/master/visibilitychange.html)
