@@ -20,6 +20,7 @@ html-demo
 - [清除浮动](https://github.com/carolyicheng666/html-demo/blob/master/clearfix.html)
 - [width、client、scroll、offset的区别](https://github.com/carolyicheng666/html-demo/blob/master/client-scroll-offset.html)
 - [table布局用法](https://github.com/carolyicheng666/html-demo/blob/master/display-table.html)
+- [es5与es6的继承](https://github.com/carolyicheng666/html-demo/blob/master/extends.js)
 - [Gradient例子](https://github.com/carolyicheng666/html-demo/blob/master/gradient.html)
 - [浏览器indexedDB用法](https://github.com/carolyicheng666/html-demo/blob/master/indexedDB.html)
 - [nodejs搭建简易服务端](https://github.com/carolyicheng666/html-demo/blob/master/node-server.js)
