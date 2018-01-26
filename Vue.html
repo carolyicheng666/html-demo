@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-resource"></script>
+  <script src="https://unpkg.com/vue-router"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <!-- vue-router -->
+  <div id="app">
+    <h1>Hello App!</h1>
+    <p>
+      <!-- 使用 router-link 组件来导航. -->
+      <!-- 通过传入 `to` 属性指定链接. -->
+      <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+      <router-link tag="button" to="/foo">Go to Foo</router-link>
+      <router-link tag="button" to="/bar">Go to Bar</router-link>
+    </p>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
+  </div>
+  <script>
+  // 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
+
+  // 1. 定义（路由）组件。
+  // 可以从其他文件 import 进来
+  const Foo = { template: '<div>foo</div>' }
+  const Bar = { template: '<div>bar</div>' }
+
+  // 2. 定义路由
+  // 每个路由应该映射一个组件。 其中"component" 可以是
+  // 通过 Vue.extend() 创建的组件构造器，
+  // 或者，只是一个组件配置对象。
+  // 我们晚点再讨论嵌套路由。
+  const routes = [
+    { path: '/foo', component: Foo },
+    { path: '/bar', component: Bar }
+  ]
+
+  // 3. 创建 router 实例，然后传 `routes` 配置
+  // 你还可以传别的配置参数, 不过先这么简单着吧。
+  const router = new VueRouter({
+    routes // （缩写）相当于 routes: routes
+  })
+
+  // 4. 创建和挂载根实例。
+  // 记得要通过 router 配置参数注入路由，
+  // 从而让整个应用都有路由功能
+  const app = new Vue({
+    router
+  }).$mount('#app')
+  </script>
+  <ul id="app1">
+    <li v-for="item in items" @click="toggle(item)">
+      <span v-show="item.show">{{item.content}}</span>
+    </li>
+  </ul>
+  <script>
+  var wm1 = new Vue({
+    el: '#app1',
+    data: function() {
+      return {
+        items: [{
+          content: '1 item',
+          show: true
+        }, {
+          content: '2 item',
+          show: true
+        }, {
+          content: '3 item',
+          show: true
+        }]
+      }
+    },
+    methods: {
+      toggle: function(item) {
+        item.show = !item.show;
+      }
+    }
+  })
+  </script>
+  <div id="app2">
+    <input type="radio" id="flash" value="flash" v-model="bizLines">
+    <label for="flash">快车</label>
+    <input type="radio" id="premium" value="premium" v-model="bizLines">
+    <label for="premium">专车</label>
+    <input type="radio" id="bus" value="bus" v-model="bizLines">
+    <label for="bus">巴士</label>
+    <br>
+    <span>Picked: {{bizLines}}</span>
+  </div>
+  <script>
+  var wm2 = new Vue({
+    el: '#app2',
+    data: {
+      bizLines: []
+    }
+  })
+  </script>
+  <div id="app3">
+    <input type="checkbox" id="flash" value="flash" v-model="bizLines">
+    <label for="flash">{{flash.name}}</label>
+    <input type="checkbox" id="premium" value="premium" v-model="bizLines">
+    <label for="premium">{{premium.name}}</label>
+    <input type="checkbox" id="bus" value="bus" v-model="bizLines">
+    <label for="bus">{{bus.name}}</label>
+    <br>
+    <span>Checked Lines: {{bizLines}}</span>
+  </div>
+  <script>
+  var wm3 = new Vue({
+    el: '#app3',
+    data: {
+      flash: { name: '快车' },
+      premium: { name: '专车' },
+      bus: { name: '巴士' },
+      bizLines: []
+    }
+  })
+  </script>
+  <div id="app4">
+    <select v-model="bizLine">
+      <option v-for="option in options" :value="option.value">{{option.text}}</option>
+    </select>
+    <br>
+    <span>Selected: {{bizLine}}</span>
+  </div>
+  <script>
+  var wm4 = new Vue({
+    el: '#app4',
+    data: {
+      bizLine: 'flash',
+      options: [
+        { text: '快车', value: 'flash' },
+        { text: '专车', value: 'premium' },
+        { text: '巴士', value: 'bus' }
+      ]
+    }
+  })
+  </script>
+  <div id="app5" v-if="show" :transition="transitionName">hello</div>
+  <script>
+  var app5 = new Vue({
+    el: '#app5',
+    data: {
+      show: true,
+      transitionName: 'fade'
+    }
+  })
+  </script>
+  <div id="app6">
+    <button @click="greet">Greet</button>
+  </div>
+  <script>
+  var app6 = new Vue({
+    el: '#app6',
+    methods: {
+      greet: function(event) {
+        alert(event.target.tagName);
+      }
+    }
+  })
+  </script>
+  <!-- 全局注册 -->
+  <div id="app7">
+    <my-component></my-component>
+  </div>
+  <script>
+  Vue.component('my-component', {
+    template: '<div>A custom component!</div>'
+  })
+  var app7 = new Vue({
+    el: '#app7'
+  })
+  </script>
+  <!-- 局部注册 -->
+  <div id="app8">
+    <my-component></my-component>
+  </div>
+  <script>
+  var Child = {
+    template: '<div>A custom component!!!!</div>'
+  }
+  var app8 = new Vue({
+    el: '#app8',
+    components: {
+      'my-component': Child
+    }
+  })
+  </script>
+  <div id="app9">
+    <child message="hello!"></child>
+  </div>
+  <script>
+  Vue.component('child', {
+    props: ['message'],
+    template: '<span>{{ message }}</span>'
+  })
+  var app9 = new Vue({
+    el: '#app9'
+  })
+  </script>
+  <!-- vue-resource -->
+  <div id="app10">
+    <button @click="ready">查询</button>
+    <span>{{item}}</span>
+  </div>
+  <script>
+  var app10 = new Vue({
+    el: '#app10',
+    data: {
+      item: ''
+    },
+    methods: {
+      ready: function() {
+        this.$http.get('https://gdwx2.e-chinalife.com/gd/app/mall/bazaar/a56').then(response => {
+          // success callback
+          console.log(response.data.item);
+          this.item = response.data.item;
+        }, response => {
+          // error callback
+          console.log('error', response.status);
+          return;
+        });
+      }
+    }
+  })
+  </script>
+  <!-- axios -->
+  <div id="app11">
+    <button @click="ready">查询</button>
+    <span>{{item}}</span>
+  </div>
+  <script>
+  Vue.prototype.$axios = axios;
+  var app11 = new Vue({
+    el: '#app11',
+    data: {
+      item: ''
+    },
+    methods: {
+      ready: function() {
+        this.$axios.get('https://gdwx2.e-chinalife.com/gd/app/mall/bazaar/a56').then(response => {
+          // success callback
+          console.log(response);
+          this.item = response.data.item;
+        })
+        .catch(error => {
+          // error callback
+          console.log(error);
+        });
+      }
+    }
+  })
+  </script>
+
+  <!-- 获取input值 -->
+  <div id="app12">
+    <!-- 有默认值 -->
+    <input type="text" value="调试 vuejs 2.0" ref="input1">
+    <a href="javascript:void(0)" @click="test1">测试</a>
+    <br>
+    <!-- 无默认值 -->
+    <input type="text" v-model="input2">
+    <a href="javascript:void(0)" @click="test2">测试</a>
+  </div>
+  <script>
+    var app12 = new Vue({
+      el: '#app12',
+      data() {
+        return {
+          result1: '',
+          result2: '',
+          input2: ''
+        }
+      },
+      methods: {
+        test1() {
+          this.result1 = this.$refs.input1.value;
+          alert(this.result1);
+        },
+        test2() {
+          this.result2 = this.input2;
+          alert(this.result2);
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
