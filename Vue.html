@@ -145,13 +145,28 @@
     }
   })
   </script>
-  <div id="app5" v-if="show" :transition="transitionName">hello</div>
+  <!-- 过渡&动画 -->
+  <style>
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+      opacity: 0;
+    }
+  </style>
+  <div id="app5">
+    <button @click="show = !show">
+      Toggle
+    </button>
+    <transition name="fade">
+      <div v-if="show">hello</div>
+    </transition>
+  </div>
   <script>
   var app5 = new Vue({
     el: '#app5',
     data: {
-      show: true,
-      transitionName: 'fade'
+      show: true
     }
   })
   </script>
@@ -291,6 +306,25 @@
           alert(this.result2);
         }
       }
+    })
+  </script>
+  
+  <!-- 混合mixins -->
+  <div id="app13">mixin</div>
+  <script>
+    var myMixin = {
+      created() {
+        this.hello()
+      },
+      methods: {
+        hello() {
+          console.log('hello from mixin!')
+        }
+      }
+    }
+    var app13 = new Vue({
+      el: '#app13',
+      mixins: [myMixin]
     })
   </script>
 </body>
