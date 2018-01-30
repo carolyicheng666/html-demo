@@ -183,6 +183,7 @@
     }
   })
   </script>
+
   <!-- 全局注册 -->
   <div id="app7">
     <my-component></my-component>
@@ -195,6 +196,7 @@
     el: '#app7'
   })
   </script>
+
   <!-- 局部注册 -->
   <div id="app8">
     <my-component></my-component>
@@ -210,6 +212,7 @@
     }
   })
   </script>
+
   <div id="app9">
     <child message="hello!"></child>
   </div>
@@ -222,6 +225,7 @@
     el: '#app9'
   })
   </script>
+
   <!-- vue-resource -->
   <div id="app10">
     <button @click="ready">查询</button>
@@ -327,6 +331,54 @@
       mixins: [myMixin]
     })
   </script>
+
+  <!-- 过滤器 -->
+  <div id="app14">
+    <p>{{ message | capitalize }}</p>
+    <input type="text" v-model="message">
+  </div>
+  <script>
+    var app14 = new Vue({
+      el: '#app14',
+      data() {
+        return {
+          message: 'john'
+        }
+      },
+      filters: {
+        capitalize: function (value) {
+          if (!value) return ''
+          value = value.toString()
+          return value.charAt(0).toUpperCase() + value.slice(1)
+        }
+      }
+    })
+  </script>
+
+  <!-- data 必须是函数 -->
+  <div id="app15">
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+  </div>
+  <script>
+    var template = {
+      template: '<button @click="counter += 1">{{ counter }}</button>',
+      data() {
+        return {
+          counter: 0
+        }
+      }
+    }
+
+    var app15 = new Vue({
+      el: '#app15',
+      components: { 
+        'simple-counter': template
+      }
+    })
+  </script>
+  
 </body>
 
 </html>
