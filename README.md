@@ -6,6 +6,8 @@ html-demo
 `css-question`根据chokcoco老师的iCSS整理
 [原文链接](https://github.com/chokcoco/iCSS)
 
+`javascript-design-patterns` 记录了一些 JavaScript 设计模式实例
+
 - [css3d变换](https://github.com/carolyicheng666/html-demo/blob/master/3D-css-transition.html)
 - [手风琴效果](https://github.com/carolyicheng666/html-demo/blob/master/Accordion.html)
 - [快速输出xx以内的连续数组](https://github.com/carolyicheng666/html-demo/blob/master/ali.js)
