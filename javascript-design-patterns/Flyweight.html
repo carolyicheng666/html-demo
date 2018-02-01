@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flyweight</title>
+</head>
+
+<body>
+  <div id="container">
+    <div class="toggle" href="#">更多信息 (XXX)
+      <span class="info">这里是更多信息</span>
+    </div>
+    <div class="toggle" href="#">更多信息 (XXX)
+      <span class="info">
+        <iframe src="https://www.baidu.com/"></iframe>
+     </span>
+    </div>
+  </div>
+</body>
+<script>
+var stateManager = {
+  fly: function() {
+    var self = this;
+    document.getElementById("container").unbind().on("click", function(e) {
+      var target = $(e.originalTarget || e.srcElement);
+      // 判断是哪一个子元素
+      if (target.is("div.toggle")) {
+        self.handleClick(target);
+      }
+    });
+  },
+
+  handleClick: function(elem) {
+    elem.find('span').toggle('slow');
+  }
+};
+</script>
+
+</html>
