@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MVVM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="myapp">
+    <button @click="sub(1)">-</button>
+    <span>{{ val }}</span>
+    <button @click="add(1)">+</button>
+  </div>
+
+  <script>
+  new Vue({
+    el: '#myapp',
+    data() {
+      return {
+        val: 0
+      }
+    },
+    methods: {
+      add(v) {
+        if (this.val < 100) {
+          this.val += v;
+        }
+      },
+      sub(v) {
+        if (this.val > 0) {
+          this.val -= v;
+        }
+      }
+    }
+  });
+  </script>
+</body>
+
+</html>
