@@ -19,6 +19,7 @@ html-demo
 - [callee用法](https://github.com/carolyicheng666/html-demo/blob/master/callee.js)
 - [HTML5 调用手机拍照并压缩上传](https://github.com/carolyicheng666/html-demo/blob/master/camera.html)
 - [checkbox全选和取消全选](https://github.com/carolyicheng666/html-demo/blob/master/checkbox.html)
+- [class前世今生](https://github.com/carolyicheng666/html-demo/blob/master/class.js)
 - [清除浮动](https://github.com/carolyicheng666/html-demo/blob/master/clearfix.html)
 - [width、client、scroll、offset的区别](https://github.com/carolyicheng666/html-demo/blob/master/client-scroll-offset.html)
 - [柯里化](https://github.com/carolyicheng666/html-demo/blob/master/currying.js)
