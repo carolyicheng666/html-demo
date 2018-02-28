@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid</title>
+</head>
+<style>
+	.container {
+		font-size: 20px;
+    display: grid;
+    grid-gap: 5px;    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+    grid-template-areas:
+      ". h h h h h h h h h h ."
+      "m m c c c c c c c c c c"
+      ". f f f f f f f f f f .";
+	}
+	.container > div {
+		border-radius: 10px;
+    text-align: center;
+    color: #fff;
+	}
+	.header {
+    grid-area: h;
+    line-height: 50px;
+	}
+	.menu {
+    grid-area: m;
+    line-height: 350px;
+	}
+	.content {
+    grid-area: c;
+    line-height: 350px;
+	}
+	.footer {
+		grid-area: f;
+    line-height: 50px;
+	}
+
+	.wrapper {
+		padding-top: 50px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+	}
+	.wrapper .item1 {
+    grid-column: 1 / 3;
+	}
+	.wrapper .item3 {
+		grid-row: 2 / 4;
+	}
+	.wrapper .item4 {
+		grid-column: 2 / 4;
+	}
+
+	.wrapper2 {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 40px 100px 40px;
+	}
+	.wrapper2 .item1, .wrapper2 .item4 {
+		grid-column: span 12;
+	}
+	.wrapper2 .item2 {
+		grid-column: span 4;
+	}
+	.wrapper2 .item3 {
+		grid-column: span 8;
+	}
+</style>
+<body>
+	<div class="container">
+	  <div class="header" style="background-color: #ACF4B6;">HEADER</div>
+	  <div class="menu" style="background-color: #FFE975;">MENU</div>
+	  <div class="content" style="background-color: #5DFFFA;">CONTENT</div>
+	  <div class="footer" style="background-color: #E6B4FD;">FOOTER</div>
+	</div>
+
+	<div class="wrapper">
+	  <div class="item1" style="background-color: #ACF4B6;">1</div>
+	  <div class="item2" style="background-color: #FFE975;">2</div>
+	  <div class="item3" style="background-color: #5DFFFA;">3</div>
+	  <div class="item4" style="background-color: #E6B4FD;">4</div>
+	  <div class="item5" style="background-color: #26DB0A;">5</div>
+	  <div class="item6" style="background-color: #FCDCDD;">6</div>
+	</div>
+
+  <div class="wrapper2">
+    <div class="item1" style="background-color: #ACF4B6;">1</div>
+    <div class="item2" style="background-color: #FFE975;">2</div>
+    <div class="item3" style="background-color: #5DFFFA;">3</div>
+    <div class="item4" style="background-color: #E6B4FD;">4</div>
+  </div>
+</body>
+</html>
