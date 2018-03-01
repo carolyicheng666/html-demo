@@ -7,6 +7,7 @@ html-demo
 [原文链接](https://github.com/chokcoco/iCSS)
 
 `javascript-design-patterns` 记录了一些 JavaScript 设计模式实例
+`jQuery-lazyload`  使用 jquery.lazyload 实现图片懒加载
 
 - [css3d变换](3D-css-transition.html)
 - [手风琴效果](Accordion.html)
@@ -26,9 +27,11 @@ html-demo
 - [table布局用法](display-table.html)
 - [es5与es6的继承](extends.js)
 - [Gradient例子](gradient.html)
+- [Grid例子](grid.html)
 - [浏览器indexedDB用法](indexedDB.html)
 - [nodejs搭建简易服务端](node-server.js)
 - [事件绑定的方式](onclick.html)
+- [es6 promise使用方式](promise.js)
 - [radio和checkbox美化](radio-checkbox.html)
 - [正则表达式实例](regex.js)
 - [网页数据保存成excel并下载](saveAsExcelFile.html)
