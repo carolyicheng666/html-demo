@@ -42,6 +42,7 @@ html-demo
 - [雪碧图](sprite.html)
 - [SweetAlert](sweetalert.html) [(原项目地址)](https://github.com/t4t5/sweetalert)
 - [transform](transform.html)
+- [数组去重](uniqueArray.js)
 - [获取浏览器名称和版本号](version.html)
 - [网页切换标签时修改title](visibilitychange.html)
 - [Vue学习记录](Vue.html)
