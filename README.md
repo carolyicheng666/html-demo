@@ -23,6 +23,7 @@ html-demo
 - [class](class.js)
 - [清除浮动](clearfix.html)
 - [width、client、scroll、offset的区别](client-scroll-offset.html)
+- [JavaScript深拷贝](copy.js)
 - [柯里化](currying.js)
 - [table布局用法](display-table.html)
 - [es5与es6的继承](extends.js)
