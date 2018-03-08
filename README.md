@@ -28,6 +28,7 @@ html-demo
 - [柯里化](currying.js)
 - [table布局用法](display-table.html)
 - [es5与es6的继承](extends.js)
+- [获取url参数的值](getUrlParam.js)
 - [Gradient例子](gradient.html)
 - [Grid例子](grid.html)
 - [浏览器indexedDB用法](indexedDB.html)
