@@ -27,6 +27,7 @@ html-demo
 - [JavaScript深拷贝](copy.js)
 - [柯里化](currying.js)
 - [table布局用法](display-table.html)
+- [事件委托](event-delegation.html)
 - [es5与es6的继承](extends.js)
 - [获取url参数的值](getUrlParam.js)
 - [Gradient例子](gradient.html)

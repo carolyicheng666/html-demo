@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件委托</title>
+</head>
+<body>
+  <input type="button" id="btn" value="增加一个li标签"/>
+  <ul id="ul">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  
+  <!-- 好处一：减少内存损耗，提高性能 -->
+  <!-- 好处二：新添加的元素还会绑定之前的事件。比如本例中，如果不用事件委托，新添加的li标签不能被绑定鼠标移入移出事件 -->
+  <!-- 原生写法 -->
+  <script>
+    window.onload = function() {
+      var oUl = document.querySelector("#ul");
+      var oBtn = document.querySelector("#btn");
+      var iNow = 3;
+      oUl.onmouseover = function(e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        if (target.nodeName.toLowerCase() === "li") {
+          target.style.background = "red";
+        }
+      }
+      oUl.onmouseout = function(e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        if (target.nodeName.toLowerCase() === "li") {
+          target.style.background = "";
+        }
+      }
+      oBtn.onclick = function() {
+        iNow++;
+        var oLi = document.createElement("li");
+        oLi.innerHTML = 1 * iNow;
+        oUl.appendChild(oLi);
+      }
+    }
+  </script>
+
+  <!-- jQuery写法 -->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      var iNow = 3;
+      $("#ul").mouseover(function(e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        if (target.nodeName.toLowerCase() === 'li') {
+          $(target).css("background", "red");
+        }
+      });
+      $("#ul").mouseout(function(e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        if (target.nodeName.toLowerCase() === 'li') {
+          $(target).css("background", "");
+        }
+      });
+      $("#btn").click(function() {
+        $("#ul").append("<li>" + (iNow++) + "</li>");
+      });
+    });
+  </script>
+</body>
+</html>
