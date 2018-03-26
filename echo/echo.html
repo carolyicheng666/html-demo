@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Echo.js</title>
+  <style>
+    img {
+      width: 500px;
+      height: 300px;
+      background: url(loading.gif) 50% no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="margin: 40px; font: 32px Microsoft Yahei; text-align: center;">图像延迟加载：Echo.js</h1>
+  <div style="width: 500px; margin: 0 auto;">
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=1"><br>
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=2"><br>
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=3"><br>
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=4"><br>
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=5"><br>
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=6"><br>
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=7"><br>
+    <img src="blank.gif" data-echo="https://picsum.photos/500/300/?image=8"><br>
+  </div>
+  <script src="echo.min.js"></script>
+  <script>
+    echo.init();
+  </script>
+</body>
+</html>
