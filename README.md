@@ -7,7 +7,9 @@ html-demo
 [原文链接](https://github.com/chokcoco/iCSS)
 
 `javascript-design-patterns` 记录了一些 JavaScript 设计模式实例
-`jQuery-lazyload`  使用 jquery.lazyload 实现图片懒加载
+
+`jQuery-lazyload`  使用 jquery.lazyload 实现图片懒加载  
+`echo` 使用 Echo.js 实现图片懒加载  
 
 - [css3d变换](3D-css-transition.html)
 - [手风琴效果](Accordion.html)
