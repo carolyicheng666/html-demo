@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    h1 {
+      color: #ed3f14;
+    }
+    h3 {
+      color: #19be6b;
+    }
+    div {
+      color: #495060;
+      border: 1px solid #dddee1;
+    }
+  </style>
+</head>
+<body>
+  <h1>一、水平居中</h1>
+  <h3>1. 文本、行内、行内块级元素</h3>
+  <div style="text-align: center;">
+    111111111111111111
+    <br>
+    <span>22222222222222</span>
+    <br>
+    <span style="display: inline-block;">3333333333</span>
+  </div>
+  <h3>2. 单个块级元素</h3>
+  <div>
+    <p style="width: 10px; margin: 0 auto;">123</p>
+  </div>
+  <h3>3. 多个块级元素</h3>
+  <div style="text-align: center;">
+    <p style="display: inline-block;">123</p>
+    <p style="display: inline-block;">456</p>
+    <p style="display: inline-block;">789</p>
+  </div>
+  <h3>4. 使用position实现</h3>
+  <div style="position: relative; width: 500px; height: 200px; background: #80848f;">
+    <div style="position: absolute; width: 100px; height: 100px; left: 50%; transform: translateX(-50%); background: #5cadff;"></div>
+  </div>
+  <h3>5. flex</h3>
+  <div style="display: flex; justify-content: center;">
+    <p>123</p>
+  </div>
+
+  <h1>二、垂直居中</h1>
+  <h3>1. 文本、行内、行内块级元素</h3>
+  <div style="height: 100px; line-height: 100px;">
+    111111111111111111
+  </div>
+  <div style="height: 100px; line-height: 100px;">
+    <span>22222222222222</span>
+  </div>
+  <div style="height: 100px; line-height: 100px;">
+    <span style="display: inline-block;">3333333333</span>
+  </div>
+  <h3>2. 多行文本、行内、行内块级</h3>
+  <div style="height: 100px; line-height: 50px;">
+    <span style="display: inline-block;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+  </div>
+  <h3>3. 图片</h3>
+  <div style="height: 200px; line-height: 200px;">
+    <img src="html-demo/icon.jpg" style="vertical-align: middle;">
+  </div>
+  <h3>4-1. 单个块级元素-----table-cell</h3>
+  <div style="display: table; height: 100px; width: 100px;">
+    <p style="display: table-cell; vertical-align: middle;">123</p>
+  </div>
+  <h3>4-2. 单个块级元素-----position</h3>
+  <div style="position: relative; height: 100px;">
+    <p style="position: absolute; top: 50%; transform: translateY(-50%); height: 50px;">123</p>
+  </div>
+  <h3>5. 单个或多个块级元素-----flex</h3>
+  <div style="display: flex; align-items: center; flex-wrap: wrap;">
+    <p style="width: 100%;">111111</p>
+    <p style="width: 100%;">222222</p>
+  </div>
+
+  <h1>三、水平垂直居中</h1>
+  <h3>1. 行内、行内块级、图片</h3>
+  <div style="height: 100px; line-height: 100px; text-align: center; font-size: 0;">
+    <span style="vertical-align: middle; font-size: 16px;">12345</span>
+  </div>
+  <h3>2. table-cell</h3>
+  <div style="height: 100px; width: 100px; display: table-cell; vertical-align: middle; text-align: center;">
+    <span>123</span>
+  </div>
+  <h3>3. position</h3>
+  <div style="position: relative; height: 100px;">
+    <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">12345</span>
+  </div>
+  <h3>4. flex</h3>
+  <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+    <span>11111</span>
+  </div>
+</body>
+</html>
