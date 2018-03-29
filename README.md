@@ -22,6 +22,7 @@ html-demo
 - [button hover效果](buttonhover.html)
 - [callee用法](callee.js)
 - [HTML5 调用手机拍照并压缩上传](camera.html)
+- [水平居中、垂直居中、水平垂直居中](center.html)
 - [checkbox全选和取消全选](checkbox.html)
 - [class](class.js)
 - [清除浮动](clearfix.html)
