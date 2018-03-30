@@ -6,6 +6,11 @@ html-demo
 `css-question`根据chokcoco老师的iCSS整理
 [原文链接](https://github.com/chokcoco/iCSS)
 
+`layout` 记录了常见的布局方式
+- [水平居中、垂直居中、水平垂直居中](layout/center.html)
+- [两列布局](layout/twoColumn.html)
+- [三列布局](layout/threeColumn.html)
+
 `javascript-design-patterns` 记录了一些 JavaScript 设计模式实例
 
 `jQuery-lazyload`  使用 jquery.lazyload 实现图片懒加载  
@@ -22,7 +27,6 @@ html-demo
 - [button hover效果](buttonhover.html)
 - [callee用法](callee.js)
 - [HTML5 调用手机拍照并压缩上传](camera.html)
-- [水平居中、垂直居中、水平垂直居中](center.html)
 - [checkbox全选和取消全选](checkbox.html)
 - [class](class.js)
 - [清除浮动](clearfix.html)
