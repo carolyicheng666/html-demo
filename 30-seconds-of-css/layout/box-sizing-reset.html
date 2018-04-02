@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>重置盒子模型</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 10px solid red;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .border-box {
+      box-sizing: border-box;
+    }
+    .border-box:before,
+    .border-box:after {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>重置盒子模型</h1>
+  <p>设置成 border-box 使盒子宽高不受 padding 和 border 的影响</p>
+  <div class="box"></div>
+  <div class="box border-box"></div>
+</body>
+</html>
