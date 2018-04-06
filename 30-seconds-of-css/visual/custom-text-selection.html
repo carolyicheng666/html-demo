@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义文本选择</title>
+  <style>
+    ::selection {
+      background: aquamarine;
+      color: black;
+    }
+    .custom-text-selection::selection {
+      background: deeppink;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <p>Select some of this text.</p>
+  <p class="custom-text-selection">Select some of this text.</p>
+</body>
+</html>
