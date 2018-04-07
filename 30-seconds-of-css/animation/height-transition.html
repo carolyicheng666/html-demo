@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>高度transiton</title>
+  <style>
+    .el {
+      transition: max-height 0.5s;
+      overflow: hidden;
+      max-height: 0;
+    }
+    .trigger:hover > .el {
+      max-height: var(--max-height);
+    }
+  </style>
+</head>
+<body>
+  <div class="trigger">
+    Hover me to see a height transition.
+    <div class="el">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  </div>
+
+  <script>
+    var el = document.querySelector('.el')
+    var height = el.scrollHeight
+    el.style.setProperty('--max-height', height + 'px')
+  </script>
+</body>
+</html>
