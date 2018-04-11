@@ -1,10 +1,11 @@
 html-demo
 =========
 
-一些经典的html例子
+记录一些经典的html例子
 
-`css-question`根据chokcoco老师的iCSS整理
-[原文链接](https://github.com/chokcoco/iCSS)
+`30-seconds-of-css` 根据atomiks的30-seconds-of-css整理，[原仓库地址](https://github.com/atomiks/30-seconds-of-css)
+
+`css-question`根据chokcoco老师的iCSS整理，[原文链接](https://github.com/chokcoco/iCSS)
 
 `layout` 记录了常见的布局方式
 - [水平居中、垂直居中、水平垂直居中](layout/center.html)
