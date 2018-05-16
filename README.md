@@ -17,6 +17,8 @@ html-demo
 `jQuery-lazyload`  使用 jquery.lazyload 实现图片懒加载  
 `echo` 使用 Echo.js 实现图片懒加载  
 
+`vue-todolist` 使用 vue-cli 制作 todolist
+
 - [css3d变换](3D-css-transition.html)
 - [手风琴效果](Accordion.html)
 - [数组求和](add.js)
