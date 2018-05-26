@@ -54,6 +54,7 @@ html-demo
 - [css摇晃效果](shake.css)
 - [6大排序算法](sort.js)
 - [雪碧图](sprite.html)
+- [stackoverflow](stackoverflow.js)
 - [SweetAlert](sweetalert.html) [(原项目地址)](https://github.com/t4t5/sweetalert)
 - [transform](transform.html)
 - [数组去重](uniqueArray.js)
