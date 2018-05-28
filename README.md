@@ -43,6 +43,7 @@ html-demo
 - [Gradient例子](gradient.html)
 - [Grid例子](grid.html)
 - [浏览器indexedDB用法](indexedDB.html)
+- [jQuery开发插件的几种方法](jQuery.fn.js)
 - [nodejs搭建简易服务端](node-server.js)
 - [事件绑定的方式](onclick.html)
 - [es6 promise使用方式](promise.js)
