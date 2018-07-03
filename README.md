@@ -22,6 +22,7 @@ html-demo
 - [css3d变换](3D-css-transition.html)
 - [手风琴效果](Accordion.html)
 - [数组求和](add.js)
+- [ajax封装](ajax.js)
 - [快速输出xx以内的连续数组](ali.js)
 - [大白](Baymax.html)
 - [伪元素实现叠加图像效果](before-after-imageStack.html)
