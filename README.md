@@ -21,6 +21,8 @@ html-demo
 
 `inheritance` JavaScript 之继承
 
+`create-object` JavaScipt 之创建对象
+
 - [css3d变换](3D-css-transition.html)
 - [手风琴效果](Accordion.html)
 - [数组求和](add.js)
