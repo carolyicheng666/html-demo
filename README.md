@@ -58,7 +58,7 @@ html-demo
 - [网页数据保存成excel并下载](saveAsExcelFile.html)
 - [改变浏览器滚动条样式 回到顶部效果](scrollAndGotop.html)
 - [scrollreveal实现图片动态显现效果](scrollreveal.html) [(原项目地址)](https://github.com/jlmakes/scrollreveal)
-- [setTimeout( ,0)和promise的执行顺序](settimeout-promise.js) 
+- [setTimeout( ,0)、promise、nextTick的执行顺序](setTimeout-promise-nextTick.js) 
 - [css摇晃效果](shake.css)
 - [6大排序算法](sort.js)
 - [雪碧图](sprite.html)
