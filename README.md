@@ -10,6 +10,7 @@ html-demo
 `layout` 记录了常见的布局方式
 - [水平居中、垂直居中、水平垂直居中](layout/center.html)
 - [两列布局](layout/twoColumn.html)
+- [两列等高布局](layout/twoColumnEqualHeight.html)
 - [三列布局](layout/threeColumn.html)
 
 `javascript-design-patterns` 记录了一些 JavaScript 设计模式实例
