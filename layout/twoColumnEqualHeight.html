@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>两列等高布局</title>
+  <style>
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f00;
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .box {
+      width: 800px;
+      margin: 0 auto;
+      font-size: 32px;
+      overflow: hidden;
+    }
+    .left, .right {
+      float: left;
+      padding-bottom: 1000px;
+      margin-bottom: -1000px;
+    }
+    .left {
+      width: 200px;
+      background: #b0b0b0;
+    }
+    .right {
+      width: 600px;
+      background: #6c6c6c;
+    }
+
+    .box2 {
+      display: flex;
+      width: 800px;
+      font-size: 32px;
+      margin: 0 auto;
+    }
+    .left2 {
+      flex: 1;
+      background: #b0b0b0;
+    }
+    .right2 {
+      flex: 3;
+      background: #6c6c6c;
+    }
+
+    .box3 {
+      display: grid;
+      width: 800px;
+      font-size: 32px;
+      margin: 0 auto;
+      grid-template-columns: 200px 1fr;
+    }
+    .left3 {
+      background: #b0b0b0;
+    }
+    .right3 {
+      background: #6c6c6c;
+    }
+  </style>
+</head>
+<body>
+  <p class="title">方案一：内外边距相互抵消，并对父元素设置 overflow: hidden;</p>
+  <div class="box">
+    <div class="left">left</div>
+    <div class="right">
+      right<br>right<br>right<br>right<br>right
+    </div>
+  </div>
+
+  <p class="title">方案二：flex</p>
+  <div class="box2">
+    <div class="left2">left</div>
+    <div class="right2">
+      right<br>right<br>right<br>right<br>right
+    </div>
+  </div>
+
+  <p class="title">方案三：grid</p>
+  <div class="box3">
+      <div class="left3">left</div>
+      <div class="right3">
+        right<br>right<br>right<br>right<br>right
+      </div>
+    </div>
+</body>
+</html>
