@@ -40,6 +40,7 @@ html-demo
 - [class](class.js)
 - [清除浮动](clearfix.html)
 - [width、client、scroll、offset的区别](client-scroll-offset.html)
+- [闭包实例](closure.js)
 - [JavaScript深拷贝](copy.js)
 - [柯里化](currying.js)
 - [table布局用法](display-table.html)
