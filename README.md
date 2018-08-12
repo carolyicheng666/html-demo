@@ -45,6 +45,7 @@ html-demo
 - [柯里化](currying.js)
 - [table布局用法](display-table.html)
 - [事件委托](event-delegation.html)
+- [跨浏览器事件封装](eventUtil.js)
 - [es5与es6的继承](extends.js)
 - [for循环setTimeout](for-sleep.js)
 - [获取url参数的值](getUrlParam.js)
