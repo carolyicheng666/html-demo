@@ -18,8 +18,6 @@ html-demo
 `jQuery-lazyload`  使用 jquery.lazyload 实现图片懒加载  
 `echo` 使用 Echo.js 实现图片懒加载  
 
-`vue-todolist` 使用 vue-cli 制作 todolist  
-
 `inheritance` JavaScript 之继承
 
 `create-object` JavaScipt 之创建对象  
