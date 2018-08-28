@@ -22,6 +22,8 @@ html-demo
 
 `create-object` JavaScipt 之创建对象  
 
+`copy` JavaScript 浅拷贝和深拷贝
+
 | :one: | :two: | :three: |
 |:--|:--|:--|
 | [css3d变换](3D-css-transition.html) | [手风琴效果](Accordion.html) | [数组求和](add.js) |
@@ -29,7 +31,7 @@ html-demo
 | [伪元素实现叠加图像效果](before-after-imageStack.html) | [js更好的写法](betterJs.js) | [8款纯css3搜索框](button.html) |
 | [button hover效果](buttonhover.html) | [callee用法](callee.js) | [HTML5 调用手机拍照并压缩上传](camera.html) |
 | [checkbox全选和取消全选](checkbox.html) | [class](class.js) | [清除浮动](clearfix.html) |
-| [width、client、scroll、offset的区别](client-scroll-offset.html) | [闭包实例](closure.js) | [JavaScript深拷贝](copy.js) |
+| [width、client、scroll、offset的区别](client-scroll-offset.html) | [闭包实例](closure.js) | [品字布局](ping.html) |
 | [柯里化](currying.js) | [table布局用法](display-table.html) | [事件委托](event-delegation.html) |
 | [跨浏览器处理事件](eventUtil.js) | [es5与es6的继承](extends.js) | [for循环setTimeout](for-sleep.js) |
 | [获取url参数的值](getUrlParam.js) | [Gradient例子](gradient.html) | [浏览器IndexedDB用法](indexedDB.html) |
