@@ -43,3 +43,4 @@ html-demo
 | [SweetAlert](sweetalert.html) [(原项目地址)](https://github.com/t4t5/sweetalert) | [transform](transform.html) | [数组去重](uniqueArray.js) |
 | [获取浏览器名称和版本号](version.html) | [网页切换标签时修改title](visibilitychange.html) | [Vue学习记录](Vue.html) |
 | [vue-todolist](vue-todolist.html) | [修改文本排列方式](writing-mode.html) | [打字效果](typing.html) |
+| [二叉树查找、遍历](binaryTree.html) |
